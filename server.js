@@ -17,9 +17,13 @@ const PORT = process.env.PORT || 3001;
 const dbName = "Znaydi"; 
 let collectionName = "users";
 
-app.use(bodyParser.json());
-// Включаем CORS для всех источников
+// Подключаем CORS для всех источников
 app.use(cors());
+
+app.use(express.json());
+
+// Используем bodyParser для обработки JSON данных
+app.use(bodyParser.json());
 
 async function getAllData() {
     const client = new MongoClient(uri, {});
