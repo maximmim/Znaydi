@@ -3,6 +3,7 @@ import { useEffect,useState } from "react";
 
 const Home = () => {
         const [userData, setUserData] = useState({});
+
     useEffect(() => {
 
         try {
@@ -20,7 +21,7 @@ const Home = () => {
     }, []);
     return ( 
         <>
-            <h1 className="fwaawg">userData</h1>
+            <h1 className="fwaawg">{userData}</h1>
         </>
      );
 }
